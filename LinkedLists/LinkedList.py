@@ -11,19 +11,19 @@ class LinkedList:
         return current.value
 
     # O(1)
-    def addToHead(value):
-        newNode = ListNode(value)
-        newNode.Next = head.Next
-        head.Next = newNode
+    def add_to_head(value):
+        new_node = ListNode(value)
+        new_node.next = head.next
+        head.next = new_node
         size += 1
 
     # O(n)
-    def addToTail(value):
-        newNode = ListNode(value)
+    def add_to_tail(value):
+        new_node = ListNode(value)
         current = head
         while current != None:
-            current = current.Next
-        current.Next = newNode
+            current = current.next
+        current.next = new_node
         size += 1
 
     # O(n)
@@ -45,17 +45,17 @@ class LinkedList:
 
 class ListNode:
     def __init__(self):
-        self.Key = None
-        self.Value = None
-        self.Next = None
-        self.Prev = None
+        self.key = None
+        self.value = None
+        self.next = None
+        self.prev = None
 
     def __init__(self, value):
-        self.Value = value
+        self.value = value
 
     def __init__(self, key, value):
-        self.Key = key
-        self.Value = value
+        self.key = key
+        self.value = value
 
-def Main(linkedList):
-    return linkedList
+def main(linked_list):
+    return linked_list

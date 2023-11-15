@@ -1,16 +1,16 @@
 class PrintList:
-    def printListIterative(self, head):
-        workingPointer = head
+    def print_list_iterative(self, head):
+        working_pointer = head
 
-        while workingPointer is not None:
-            print(workingPointer.value)
-            workingPointer = workingPointer.Next
+        while working_pointer is not None:
+            print(working_pointer.value)
+            working_pointer = working_pointer.next
     
-    def printListRecursive(self, node):
+    def print_list_recursive(self, node):
         if node is None:
             return
-        print(node.Value)
-        printListRecursive(node.Value)
+        print(node.value)
+        print_list_recursive(node.value)
 
     def reverse_print_list_iterative(head):
         stack = []
@@ -22,8 +22,8 @@ class PrintList:
             print(stack[-1].value)
             stack.pop()
 
-    def reversePrintListRecursive(node):
+    def reverse_print_list_recursive(node):
         if node is not None:
             return
-        reversePrintListRecursive(node.Next)
-        print(node.Value)
+        reverse_print_list_recursive(node.next)
+        print(node.value)

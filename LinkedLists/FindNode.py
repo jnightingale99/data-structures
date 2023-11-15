@@ -1,5 +1,5 @@
 class FindNode:
-    def findMiddleNode(self, head):
+    def find_middle_node(self, head):
         slow = head
         fast = head
         while fast is not None and fast.next is not None:
@@ -7,12 +7,12 @@ class FindNode:
             fast = fast.next.next
         return slow
     
-    def findKthToLastNode(self, head, k):
-        rightOfWindow = head
-        leftOfWindow = head
+    def find_kth_to_last_node(self, head, k):
+        right_of_window = head
+        left_of_window = head
         for i in range(k):
-            rightOfWindow = rightOfWindow.next
-        while rightOfWindow is not None:
-            leftOfWindow = leftOfWindow.next
-            rightOfWindow = rightOfWindow.next
-        return leftOfWindow
+            right_of_window = right_of_window.next
+        while right_of_window is not None:
+            left_of_window = left_of_window.next
+            right_of_window = right_of_window.next
+        return left_of_window

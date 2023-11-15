@@ -1,25 +1,24 @@
 class ReverseList:
-    def reverseListIteratively(self, head):
-        workingPointer = head
+    def reverse_list_iteratively(self, head):
+        working_pointer = head
         prev = None
 
-        while workingPointer is not None:
-            preservedNextNode = workingPointer.Next
-            workingPointer.Next = prev
-            prev = workingPointer
-            workingPointer = preservedNextNode
+        while working_pointer is not None:
+            preserved_next_node = working_pointer.next
+            working_pointer.next = prev
+            prev = working_pointer
+            working_pointer = preserved_next_node
 
-        reversedLinkedListHead = prev
-        return reversedLinkedListHead
+        reversed_linked_list_head = prev
+        return reversed_linked_list_head
     
-    def reverseListRecursively(self, node):
-        if node is None or node.Next is None:
+    def reverse_list_recursively(self, node):
+        if node is None or node.next is None:
             return node
         
-        reversedLinkedListHead = reverseListRecursively(node.Next)
+        reversed_linked_list_head = reverse_list_recursively(node.next)
 
-        nodeToMyRight = node.Next
-        nodeToMyRight.Next = node
-        node.Next = None
+        node_to_my_right.next = node
+        node.next = None
 
-        return reversedLinkedListHead
+        return reversed_linked_list_head
